@@ -142,10 +142,12 @@ workflow.add_edge("portfolio_manager", "execution_trader")
 workflow.add_edge("execution_trader", END)
 
 app = workflow.compile()
+```
 
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the Repository
-```bash
+```
+bash ```
 git clone [https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git](https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git)
 cd darwinian-analyst-swarm
