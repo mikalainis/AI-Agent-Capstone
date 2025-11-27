@@ -60,14 +60,11 @@ This project uses **LangGraph** to create a stateful, cyclic workflow. Unlike li
 
 ---
 
-## ⚙️ Installation & Setup
+## 🧩 Core Workflow Implementation
 
-### 1. Clone the Repository
-```bash
-git clone [https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git](https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git)
-cd darwinian-analyst-swarm
+The heart of this agent is `workflow.py`. Below is the logical flow using **LangGraph**, which defines how agents pass the "State" (information) between one another.
 
-```
+```python
 # --- 1. DEFINE THE SHARED STATE ---
 # This is the "memory" that gets passed between agents.
 class AgentState(TypedDict):
@@ -143,6 +140,12 @@ workflow.add_edge("news_hunter", "analyst_swarm")
 workflow.add_edge("analyst_swarm", "portfolio_manager")
 workflow.add_edge("portfolio_manager", "execution_trader")
 workflow.add_edge("execution_trader", END)
-```
 
 app = workflow.compile()
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the Repository
+```bash
+git clone [https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git](https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git)
+cd darwinian-analyst-swarm
