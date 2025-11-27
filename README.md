@@ -1,6 +1,11 @@
 # 🧬 Darwinian Analyst Swarm
 ### *AI Agents that Read, Reason, and Trade.*
 
+![Project Thumbnail Header](./images/thumbnail_placeholder.jpg)
+*(This image will serve as the project card thumbnail)*
+
+---
+
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![LangChain](https://img.shields.io/badge/LangGraph-Agentic-orange) ![Gemini](https://img.shields.io/badge/Powered%20By-Gemini%201.5-8E75B2)
 
 > **"A self-correcting AI workforce that reads, reasons, and trades faster than any human."**
@@ -32,8 +37,8 @@ This project uses **LangGraph** to create a stateful, cyclic workflow. Unlike li
 4.  **Decision:** The **Portfolio Manager** reviews the Analyst's findings. It acts as a risk gatekeeper—only approving trades with high conviction.
 5.  **Execution:** If approved, the **Trader Agent** connects to the **Alpaca Paper Trading API** to execute the buy/sell order in real-time.
 
-![Architecture Diagram](./architecture_diagram.png)
-*(Note: Replace `./architecture_diagram.png` with the actual path to your image file)*
+![Architecture Workflow Diagram](./images/workflow_diagram_placeholder.png)
+*(Detailed agentic workflow flow diagram)*
 
 ---
 
