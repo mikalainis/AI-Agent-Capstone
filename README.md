@@ -1,8 +1,9 @@
-# 🧬 Darwinian Analyst Swarm
+![Project Thumbnail Header](Screenshot 2025-11-27 10.56.18 AM.png)
+*(This image will serve as the project card thumbnail)*
+
+# Darwinian Analyst Swarm
 ### *AI Agents that Read, Reason, and Trade.*
 
-![Project Thumbnail Header](./images/thumbnail_placeholder.jpg)
-*(This image will serve as the project card thumbnail)*
 
 ---
 
