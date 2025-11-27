@@ -37,7 +37,7 @@ This project uses **LangGraph** to create a stateful, cyclic workflow. Unlike li
 4.  **Decision:** The **Portfolio Manager** reviews the Analyst's findings. It acts as a risk gatekeeper—only approving trades with high conviction.
 5.  **Execution:** If approved, the **Trader Agent** connects to the **Alpaca Paper Trading API** to execute the buy/sell order in real-time.
 
-![Architecture Workflow Diagram](./images/workflow_diagram_placeholder.png)
+![Architecture Workflow Diagram](Gemini_Generated_Image_g8dm7yg8dm7yg8dm.png)
 *(Detailed agentic workflow flow diagram)*
 
 ---
