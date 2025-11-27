@@ -1,10 +1,6 @@
-![Project Thumbnail Header](Screenshot 2025-11-27 10.56.18 AM.png)
-*(This image will serve as the project card thumbnail)*
-
 # Darwinian Analyst Swarm
 ### *AI Agents that Read, Reason, and Trade.*
-
-
+![Project Thumbnail Header](Screenshot 2025-11-27 10.56.18 AM.png)
 ---
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg) ![Python](https://img.shields.io/badge/python-3.10%2B-blue) ![LangChain](https://img.shields.io/badge/LangGraph-Agentic-orange) ![Gemini](https://img.shields.io/badge/Powered%20By-Gemini%201.5-8E75B2)
