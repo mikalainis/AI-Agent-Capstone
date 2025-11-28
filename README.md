@@ -29,6 +29,19 @@ The **Darwinian Analyst Swarm** is an autonomous multi-agent system fueled by **
 This project uses **LangGraph** to create a stateful, cyclic workflow. Unlike linear chains, this graph allows agents to pass "memory" (state) back and forth, enabling complex reasoning.
 
 ### The Flow
+
+graph TD
+    A[Start: Ticker Input] --> B[News Hunter Agent]
+    B --> C[Analyst Swarm Agent]
+    C --> D[Portfolio Manager Agent]
+    D --> E{Decision: Trade?}
+    E -- No/Hold --> F[End]
+    E -- Yes/Buy/Sell --> G[🛑 Slack Bot: Request Approval]
+    G --> H((Human User))
+    H -- Deny --> F
+    H -- Approve --> I[💸 Execution Trader Agent]
+    I --> J[Alpaca API]
+    
 1.  **Input:** User provides a stock ticker (e.g., `$NVDA`).
 2.  **Ingestion:** The **News Hunter** uses DuckDuckGo to fetch live financial news.
 3.  **Analysis (The "Swarm"):** The **Analyst Agent** (Gemini 1.5) reads the raw text, filtering out noise and assigning a sentiment score based on reasoning.
