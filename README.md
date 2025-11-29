@@ -26,7 +26,7 @@ The **Darwinian Analyst Swarm** is an autonomous multi-agent system fueled by **
 
 ## 🏗️ Architecture
 
-![Architecture Workflow Diagram](Gemini_Generated_Image_g8dm7yg8dm7yg8dm.png)
+![Architecture Workflow Diagram](Gemini_Generated_Image_sg8lqqsg8lqqsg8l.png)
 *(Detailed agentic workflow flow diagram)*
 
 Unlike traditional chatbots that wait for user prompts, the **Darwinian Analyst Swarm** is designed as an event-driven system. The workflow is triggered by the ingestion of live data, processes it through a strict reasoning engine, and pauses for human verification before taking financial action.
