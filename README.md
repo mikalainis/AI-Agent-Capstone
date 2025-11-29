@@ -26,19 +26,8 @@ The **Darwinian Analyst Swarm** is an autonomous multi-agent system fueled by **
 
 ## 🏗️ Architecture
 
-This project uses **LangGraph** to create a stateful, cyclic workflow. Unlike linear chains, this graph allows agents to pass "memory" (state) back and forth, enabling complex reasoning.
-
-### The Flow
-
-1.  **Input:** User provides a stock ticker (e.g., `$NVDA`).
-2.  **Ingestion:** The **News Hunter** uses DuckDuckGo to fetch live financial news.
-3.  **Analysis (The "Swarm"):** The **Analyst Agent** (Gemini 1.5) reads the raw text, filtering out noise and assigning a sentiment score based on reasoning.
-4.  **Decision:** The **Portfolio Manager** reviews the Analyst's findings. It acts as a risk gatekeeper—only approving trades with high conviction.
-5.  **Execution:** If approved, the **Trader Agent** connects to the **Alpaca Paper Trading API** to execute the buy/sell order in real-time.
-
 ![Architecture Workflow Diagram](Gemini_Generated_Image_g8dm7yg8dm7yg8dm.png)
 *(Detailed agentic workflow flow diagram)*
-## 🏗️ Architecture: The "News-First" Loop
 
 Unlike traditional chatbots that wait for user prompts, the **Darwinian Analyst Swarm** is designed as an event-driven system. The workflow is triggered by the ingestion of live data, processes it through a strict reasoning engine, and pauses for human verification before taking financial action.
 
@@ -120,12 +109,19 @@ def run_workflow(ticker):
   
 ## 🛠️ Technology Stack
 
-* **Language:** Python 3.10+
-* **Orchestration:** LangChain & LangGraph
-* **LLM (Brain):** Google Gemini 1.5 Flash
-* **Brokerage (Action):** Alpaca Trade API (Paper Trading)
-* **Search (Data):** DuckDuckGo Search
+* **Core Intelligence (The Brain):**
+    * **Google Gemini 1.5 Flash:** Chosen for its speed, low latency, and massive context window (perfect for reading multiple news articles).
+    * **Google Gen AI SDK (`google-genai`):** We use the native SDK instead of LangChain for cleaner, more controllable, and lightweight code.
 
+* **Data & Execution (The Tools):**
+    * **DuckDuckGo Search:** For retrieving real-time, non-hallucinated financial news.
+    * **Alpaca Markets API:** For paper trading execution and portfolio management.
+    * **Slack SDK:** For sending real-time alerts and handling Human-in-the-Loop (HITL) authorization.
+
+* **Infrastructure:**
+    * **Python 3.10+:** The runtime environment.
+    * **Google Colab:** Used for rapid prototyping and testing.
+    * **Pydantic:** Used for data validation and managing the agent's internal state.
 ---
 
 ## 🧩 Core Workflow Implementation
