@@ -6,7 +6,7 @@
 > **"A self-correcting AI workforce that reads, reasons, and trades faster than any human."**
 
 ### *AI Agents that Read, Reason, and Trade.*
-![Project Thumbnail Header](Screenshot 2025-11-27 10.56.18 AM.png)
+![Project Thumbnail Header](mikalainis/AI-Agent-Capstone/Screenshot 2025-11-27 10.56.18 AM.png)
 
 ---
 
