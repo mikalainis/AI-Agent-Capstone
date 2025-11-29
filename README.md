@@ -98,7 +98,7 @@ def run_workflow(ticker):
     # 5. Execute (Alpaca API)
     alpaca.submit_order(ticker, analysis.decision)
 
-
+```
 ---
 
 ## 🚀 Features
@@ -108,8 +108,6 @@ def run_workflow(ticker):
 * **Reasoning Engine:** Uses **Gemini 1.5 Flash/Pro** to understand context, not just keywords.
 * **Real-Time Execution:** Integrated with Alpaca Markets for live paper trading.
 * **Modular Design:** Built on LangChain/LangGraph, making it easy to add new "Analyst Personas" later.
-
----
 
 ## 🛠️ Technology Stack
 
@@ -123,14 +121,13 @@ def run_workflow(ticker):
 
 ## 🧩 Core Workflow Implementation
 
-```python
+python
 TBD
-```
 
 ## ⚙️ Installation & Setup
 
 ### 1. Clone the Repository
-```
-bash ```
+```bash
 git clone [https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git](https://github.com/YOUR_USERNAME/darwinian-analyst-swarm.git)
 cd darwinian-analyst-swarm
+```
