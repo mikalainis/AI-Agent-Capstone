@@ -101,14 +101,23 @@ def run_workflow(ticker):
 ```
 ---
 
-## 🚀 Features
+## 🚀 Key Features
 
-* **Multi-Agent Collaboration:** Agents have distinct roles and responsibilities.
-* **Tool Use:** Agents autonomously use search tools to find fresh data.
-* **Reasoning Engine:** Uses **Gemini 1.5 Flash/Pro** to understand context, not just keywords.
-* **Real-Time Execution:** Integrated with Alpaca Markets for live paper trading.
-* **Modular Design:** Built on LangChain/LangGraph, making it easy to add new "Analyst Personas" later.
+* **Event-Driven "News First" Architecture**
+    Unlike passive chatbots, this agent is proactive. It initiates the workflow the moment it detects fresh news signals, effectively acting as a 24/7 autonomous watchdog for your portfolio.
 
+* **Human-in-the-Loop (HITL) via Slack**
+    Automated trading is risky. We mitigate this by integrating a **Slack Safety Valve**. The agent calculates the trade, formats a briefing, and waits for a specific `YES` command from a human in a private Slack channel before executing money moves.
+
+* **Structured Intelligence (JSON Mode)**
+    Gone are the days of parsing messy chat text. This project leverages **Gemini 1.5's Native JSON Mode** (`response_mime_type="application/json"`), forcing the LLM to output decision data in a strict, machine-readable schema every single time.
+
+* **Algorithmic Risk Management**
+    The **Portfolio Manager** logic layer acts as a firewall. It filters out "hallucinated" or weak signals by enforcing a strict **Confidence Threshold (>75%)**. If the AI isn't sure, it doesn't trade.
+
+* **Pure Python SDK Implementation**
+    By removing heavy wrapper frameworks (like LangChain) and using the official **Google Gen AI SDK**, the codebase remains lightweight, easier to debug, and faster to deploy on serverless environments like Cloud Run.
+  
 ## 🛠️ Technology Stack
 
 * **Language:** Python 3.10+
